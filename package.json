@@ -1,0 +1,42 @@
+{
+  "name": "web-performance-intelligence",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "db:migrate": "tsx scripts/migrate.ts",
+    "worker": "tsx src/worker/main.ts",
+    "worker:once": "tsx src/worker/main.ts --once",
+    "scheduler": "tsx src/worker/scheduler.ts",
+    "scheduler:once": "tsx src/worker/scheduler.ts --once",
+    "analysis-worker": "tsx src/worker/analysis-main.ts",
+    "analysis-worker:once": "tsx src/worker/analysis-main.ts --once"
+  },
+  "dependencies": {
+    "@auth/core": "^0.41.0",
+    "next": "^16.0.0",
+    "next-auth": "^5.0.0-beta.30",
+    "pg": "^8.16.3",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "tsx": "^4.23.15",
+    "zod": "^4.1.12"
+  },
+  "devDependencies": {
+    "@types/node": "^24.8.1",
+    "@types/pg": "^8.15.5",
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.2",
+    "eslint": "^10.12.0",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.71.2",
+    "vitest": "^5.0.4"
+  }
+}
